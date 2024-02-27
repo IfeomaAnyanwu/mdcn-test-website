@@ -1,0 +1,583 @@
+/*
+=============== 
+Fonts
+===============
+*/
+@import url("https://fonts.googleapis.com/css?family=Lato:400,700&display=swap");
+
+/*
+=============== 
+Variables
+===============
+*/
+
+:root {
+  --clr-nigeriaGreen-1: rgb(0, 135, 83);
+  --clr-nigeriaGreen-2: rgb(27, 115, 57);
+  --clr-nigeriaWhite-1: rgb(255, 255, 255);
+  --clr-mdcngreen-1: #0f9508;
+  --clr-mdcngreen-2: #17b60f;
+  --clr-mdcnbody: #555;
+  --clr-mdcnred: hsl(350, 89%, 45%);
+  --clr-mdcnred-2: hsl(350, 81%, 29%);
+  --clr-mdcnred-3: rgb(153, 20, 42);
+  /* primary/main color */
+  --clr-primary-5: hsl(350, 62%, 45%);
+  /* lighter shades of primary color */
+  --clr-primary-6: hsl(350, 57%, 50%);
+  --clr-primary-7: hsl(349, 65%, 59%);
+  --clr-primary-8: hsl(349, 80%, 74%);
+  --clr-primary-9: hsl(349, 94%, 87%);
+  --clr-primary-10: hsl(351, 100%, 94%);
+  /* darkest grey - used for headings */
+  --clr-gold-1: hsl(50, 91%, 41%);
+  --clr-gold-2: hsl(52, 81%, 45%);
+  --clr-gold-3: hsl(50, 71%, 57%);
+  --clr-gold-4: hsl(51, 61%, 67%);
+  /* grey used for paragraphs */
+  --clr-grey-black: hsl(0, 3%, 6%);
+  --clr-grey-5: hsl(280, 2%, 26%);
+  --clr-grey-6: hsl(273, 4%, 30%);
+  --clr-grey-7: hsl(275, 6%, 34%);
+  --clr-grey-8: #d3d3d3;
+  --clr-light-grey: hsl(0, 0%, 95%);
+  --clr-grey-9: hsl(276, 33%, 90%);
+  --clr-grey-10: hsla(111, 26%, 95%, 0.735);
+  --clr-white: #fff;
+  --ff-primary: "Lato", sans-serif;
+  --transition: all 0.3s linear;
+  --spacing: 0.25rem;
+  --radius: 0.5rem;
+  --light-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  --dark-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  --clr-border-radius: 4%;
+}
+
+/*
+=============== 
+Global Styles
+===============
+*/
+
+section {
+  margin: 1rem 0rem 4rem 0rem;
+
+  width: 75vw;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.title {
+  color: var(--clr-grey-black);
+}
+
+.btn {
+  text-transform: uppercase;
+  color: var(--clr-white);
+  background: var(--clr-mdcngreen-1);
+  padding: 0.375rem 0.75rem;
+  letter-spacing: var(--spacing);
+  display: inline-block;
+  /* font-weight: 700; */
+  transition: var(--transition);
+  font-size: 0.84rem;
+  border: 2px solid transparent;
+  cursor: pointer;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+}
+.btn:hover {
+  background: var(--clr-nigeriaGreen-2);
+}
+
+/*
+=============== 
+Nav  Styles
+===============
+*/
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  color: var(--clr-mdcnbody);
+  font-family: "Lato", sans-serif;
+  line-height: 1.5;
+  width: 100vw;
+}
+
+nav {
+  width: 80vw;
+  margin: 0 auto;
+}
+
+.lower-nav {
+  width: 90vw;
+}
+
+#email {
+  text-transform: lowercase;
+  font-weight: normal;
+  font-size: 0.9rem;
+}
+
+#email strong {
+  text-transform: capitalize;
+}
+
+a {
+  text-decoration: none;
+  color: var(--clr-mdcnbody);
+}
+
+.upper-nav,
+.lower-nav {
+  display: flex;
+  margin-top: 1.5rem;
+  font-weight: bold;
+  justify-content: center;
+  text-transform: uppercase;
+}
+
+.upper-nav {
+  font-size: 0.84rem;
+  justify-content: space-around;
+  gap: 9rem;
+}
+
+.top-links > ul,
+.lower-list > ul {
+  display: flex;
+  list-style-type: none;
+}
+
+.top-links > ul li {
+  border-left: 1px solid var(--clr-grey-8);
+}
+
+.top-links > ul {
+  gap: 1rem;
+}
+
+.top-links ul li a {
+  padding: 0.8rem 0.4rem;
+}
+
+.top-links ul li a:hover {
+  background-color: var(--clr-light-grey);
+
+  border-radius: var(--clr-border-radius);
+}
+
+.lower-nav {
+  justify-content: space-around;
+}
+
+.lower-list {
+  font-size: 0.7rem;
+  letter-spacing: 0.05rem;
+}
+
+/*
+.lower-list > ul > li{
+  padding: 1rem 0rem;
+}
+*/
+
+#logo-part {
+  display: flex;
+  gap: 1rem;
+}
+
+#logo {
+  width: 3rem;
+}
+
+#logo-part > h3 {
+  font-weight: bolder;
+  line-height: 1.3rem;
+  color: var(--clr-nigeriaGreen-1);
+}
+
+/*
+=============== 
+Drop Down Styles
+===============
+*/
+/* nav list container (ul)*/
+.lower-list ul {
+  position: relative;
+  background-color: var(--clr-white);
+  z-index: 999;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+/*  lower nav list links*/
+.lower-list ul li a {
+  display: block;
+  padding: 10px 20px;
+  text-decoration: none;
+}
+
+/* lower nav list drop down container*/
+.lower-list ul ul {
+  position: absolute;
+  top: 100%;
+  display: none;
+  border-top: 2px solid var(--clr-nigeriaGreen-2);
+  text-transform: uppercase;
+  font-size: 0.7rem;
+  width: 22rem;
+  box-shadow: 0px 16px 16px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* lower drop down list*/
+.lower-nav ul ul li {
+  display: block;
+}
+
+/* lower  nav list hover*/
+.lower-list ul li:hover {
+  background-color: var(--clr-nigeriaGreen-2);
+  color: var(--clr-white);
+  border-radius: var(--clr-border-radius);
+}
+/*  active lower nav list*/
+.active {
+  background-color: var(--clr-nigeriaGreen-2);
+  color: var(--clr-white);
+  padding-bottom: 1rem;
+  border-radius: var(--clr-border-radius);
+}
+
+/* nav list on hover*/
+.lower-list ul li:hover .first-ul-div {
+  background-color: var(--clr-nigeriaGreen-2);
+  color: var(--clr-white);
+  padding-bottom: 1rem;
+}
+
+/* create space bewteen active nav list and next list " hover*/
+.lower-list ul li {
+  border-left: 1px solid var(--clr-white);
+}
+
+/* display dropdow container on  nav list hover */
+.lower-list ul li:hover ul {
+  display: block;
+}
+
+/* Change the background color of dropdown links on hover */
+
+.lower-list ul ul li a:hover {
+  background-color: var(--clr-light-grey);
+  color: var(--clr-mdcngreen-2);
+  font-weight: bold;
+}
+
+/*
+=============== 
+Mega Menu
+===============
+*/
+
+.second-ul-div {
+  text-transform: uppercase;
+  color: var(--clr-mdcnbody);
+  /* border between mega columns */
+  border-left: 1px solid var(--clr-grey-8);
+  /* border on top mega columns*/
+  border-top: 1px solid var(--clr-mdcngreen-1);
+}
+
+.mega-h3 {
+  padding-left: 20px;
+  font-size: 0.8rem;
+  padding-bottom: 0.5rem;
+  color: black;
+}
+
+/* remove border on top Regisraion ul applied o firs level ul */
+#mega-first-ul {
+  border-top: none;
+  box-shadow: none;
+  margin-left: -28rem;
+}
+
+.row {
+  width: 65rem;
+  background-color: var(--clr-white);
+  color: white;
+  box-shadow: 0px 16px 16px 16px rgba(0, 0, 0, 0.2);
+}
+
+.column {
+  float: left;
+  width: 33.33%;
+  padding: 10px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/*
+=============== 
+Slider styles
+===============
+*/
+
+#slider-background {
+  height: 33rem;
+  width: 100vw;
+  position: relative;
+  background: linear-gradient(rgba(0, 135, 83, 0.8), rgba(0, 135, 83, 0.7)),
+    url("/images/mdcn-house-full.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+#slider-wrapper {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  align-items: center;
+  height: 100%;
+  width: 75vw;
+  margin: auto;
+}
+
+#slider-img {
+  height: 80%;
+  width: 50%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+#slider-text {
+  position: relative;
+  color: var(--clr-white);
+  width: 50%;
+  max-height: 80%;
+  text-align: left;
+  font-size: 2rem;
+  font-weight: bolder;
+  letter-spacing: 0.2rem;
+  text-transform: uppercase;
+}
+
+/*
+=============== 
+Other Links
+===============
+*/
+
+#other-links {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-transform: capitalize;
+  text-decoration: underline;
+  font-weight: bold;
+  font-size: 1rem;
+  border: 1px solid var(--clr-grey-10);
+  padding: 2rem;
+  background-color: var(--clr-grey-10);
+}
+
+#remita-logo,
+#portal-logo {
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+}
+
+.remita,
+.mdcn-portal,
+.mdcn-register {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.3rem;
+}
+
+.fa-magnifying-glass {
+  color: var(--clr-mdcngreen-1);
+  font-size: 1.5rem;
+}
+
+/*
+======================================== 
+Registrar Message
+========================================
+*/
+
+.registrar-msg {
+  display: flex;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 5rem;
+}
+
+.registrar {
+  width: 70%;
+}
+
+.mission-vision {
+  width: 30%;
+}
+
+.registrar img {
+  width: 45%;
+  float: left;
+  margin: 0rem 2rem 1rem 0rem;
+  /*border: 0.5rem solid var(--clr-mdcngreen); */
+  outline: 0.2rem solid var(--clr-mdcnred);
+  outline-offset: 0.3rem;
+  border-radius: 10%;
+}
+
+.registrar-name {
+  position: relative;
+  font-weight: bold;
+}
+
+.float-paragraph {
+  text-align: justify;
+}
+
+#more {
+  display: none;
+}
+
+.mission-vision {
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+}
+
+.mission,
+.vision {
+  color: var(--clr-mdcnred);
+}
+
+/*
+======================================== 
+Latest News
+========================================
+*/
+
+.latest-news-section {
+  min-width: 100vw;
+  min-height: 50rem;
+  margin-bottom: 1rem;
+  background-color: var(--clr-grey-10);
+}
+
+#latest-new-container {
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+#news-heading {
+  margin-left: 10rem;
+  padding-top: 1rem;
+}
+
+.news-card {
+  height: 32rem;
+  width: 23%;
+  background-color: var(--clr-white);
+  position: relative;
+  top: 3rem;
+  bottom: 5rem;
+  border-radius: 0.5rem 0.5rem 0.5rem 0.5rem;
+  /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); */
+  /* embossed box shadow */
+  box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.4),
+    0px 7px 13px -3px rgba(0, 0, 0, 0.3),
+    0px -3px 0px 0px rgba(0, 0, 0, 0.2) inset;
+}
+
+.news-card img {
+  width: 100%;
+  height: 40%;
+}
+
+.news-card-text {
+  padding-inline: 1rem;
+}
+
+.news-link {
+  padding-inline: 1rem;
+}
+
+.news-card a:hover {
+  text-decoration: underline;
+  color: var(--clr-mdcngreen-1);
+}
+
+/*
+======================================== 
+Footer
+========================================
+*/
+
+.inner-footer,
+.outer-footer,
+.outer-footer-center a {
+  color: var(--clr-white);
+  font-size: 0.85rem;
+}
+.inner-footer {
+  height: 42rem;
+
+  background-color: var(--clr-nigeriaGreen-2);
+}
+
+.outer-footer {
+  height: 33rem;
+  background-color: var(--clr-nigeriaGreen-1);
+  position: relative;
+  top: 0.2rem;
+}
+
+.outer-footer-center {
+  display: flex;
+  justify-content: space-between;
+  gap: 5rem;
+  margin-left: auto;
+  margin-right: auto;
+  text-wrap: wrap;
+  width: 75vw;
+  padding-top: 3rem;
+  line-height: 1.5rem;
+  letter-spacing: 0.08rem;
+}
+
+.outer-footer-center span {
+  font-weight: bolder;
+  font-size: 1rem;
+}
+
+.copyright {
+  text-align: center;
+  letter-spacing: 0.08rem;
+}
