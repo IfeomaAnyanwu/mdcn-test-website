@@ -20,7 +20,7 @@ Variables
   --clr-mdcnbody: #555;
   --clr-mdcnred: hsl(350, 89%, 45%);
   --clr-mdcnred-2: hsl(350, 81%, 29%);
-  --clr-mdcnred-3: rgb(153, 20, 42);
+  --clr-mdcnred-3: rgb(170, 30, 53);
   /* primary/main color */
   --clr-primary-5: hsl(350, 62%, 45%);
   /* lighter shades of primary color */
@@ -59,6 +59,12 @@ Global Styles
 ===============
 */
 
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 section {
   margin: 1rem 0rem 4rem 0rem;
 
@@ -73,8 +79,8 @@ section {
 
 .btn {
   text-transform: uppercase;
-  color: var(--clr-white);
-  background: var(--clr-mdcngreen-1);
+  font-weight: bold;
+  /* background: var(--clr-mdcngreen-1); */
   padding: 0.375rem 0.75rem;
   letter-spacing: var(--spacing);
   display: inline-block;
@@ -85,8 +91,16 @@ section {
   cursor: pointer;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
 }
+
 .btn:hover {
   background: var(--clr-nigeriaGreen-2);
+  color: var(--clr-white);
+}
+
+.moreBtn {
+  position: absolute;
+  bottom: 0.8rem;
+  left: 3rem;
 }
 
 /*
@@ -102,6 +116,8 @@ Nav  Styles
 }
 
 body {
+  /* This overflow hides horizontal scroll from webpage  */
+  overflow-x: hidden;
   color: var(--clr-mdcnbody);
   font-family: "Lato", sans-serif;
   line-height: 1.5;
@@ -358,7 +374,7 @@ Slider styles
 }
 
 #slider-img {
-  height: 80%;
+  height: 85%;
   width: 50%;
   background-size: cover;
   background-position: center;
@@ -378,9 +394,109 @@ Slider styles
 }
 
 /*
-=============== 
+==========================================
+Latest Updates
+=========================================
+*/
+
+#latest-scroll-news-section {
+  position: relative;
+  margin-bottom: 1rem;
+  min-width: 100vw;
+}
+
+.latest-scroll-news-container {
+  display: flex;
+
+  position: relative;
+  background-color: var(--clr-grey-10);
+  top: -1rem;
+  border: 1px solid var(--clr-mdcngreen-1);
+}
+
+.latest-scroll-news-container a {
+  margin-right: 1rem;
+  letter-spacing: 0.08rem;
+  text-transform: uppercase;
+  color: var(--clr-mdcnred);
+  /* -webkit-animation: move-text 40s infinite linear;
+  animation: move-text 5s linear ;
+  animation-fill-mode: forwards; */
+  animation-name: move-text;
+  animation-duration: 40s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  animation-delay: -10s;
+  padding: 0.5rem 0rem;
+  font-weight: bold;
+  white-space: nowrap;
+}
+
+.latest-scroll-news-container a:hover {
+  color: var(--clr-mdcngreen-2);
+  text-transform: underline;
+}
+
+.latest-scroll-news-container .update-divider {
+  color: var(--clr-mdcngreen-1);
+  font-weight: bold;
+}
+
+#latest-scroll-news-button {
+  margin-left: 0;
+  position: sticky;
+  z-index: 2;
+  letter-spacing: 0.1rem;
+  font-weight: bold;
+  padding: 0.5rem 1rem;
+  text-wrap: nowrap;
+  color: var(--clr-mdcnred);
+  font-weight: bold;
+  font-size: 1rem;
+}
+
+#latest-scroll-news-button:hover {
+  color: var(--clr-white);
+}
+
+/* @-webkit-keyframes move-text {
+  0% {
+    /* transform: translateX(-1300px); */
+/* transform: translateX(100vw);
+  } */
+/* 100% { */
+/* transform: translateX(1300px); */
+/* transform: translateX(100vw);
+  } */
+/*  */
+
+@keyframes move-text {
+  from {
+    /* transform: translateX(-1100px); */
+    transform: translateX(100vw);
+  }
+
+  to {
+    transform: translateX(-200vw);
+  }
+  /*
+  50% {
+    transform: translateX(-50vw);
+  }
+
+  75% {
+    transform: translateX(-30vw);
+  } */
+
+  /* 100% {
+    transform: translateX(100vw);
+  } */
+}
+
+/*
+========================================= 
 Other Links
-===============
+========================================
 */
 
 #other-links {
@@ -392,7 +508,7 @@ Other Links
   font-weight: bold;
   font-size: 1rem;
   border: 1px solid var(--clr-grey-10);
-  padding: 2rem;
+  padding: 1rem;
   background-color: var(--clr-grey-10);
 }
 
@@ -410,6 +526,13 @@ Other Links
   align-items: center;
   justify-content: center;
   gap: 0.3rem;
+}
+
+.remita a:hover,
+.mdcn-portal a:hover,
+.mdcn-register a:hover {
+  color: var(--clr-mdcngreen-2);
+  text-decoration-color: var(--clr-mdcngreen-2);
 }
 
 .fa-magnifying-glass {
@@ -437,6 +560,7 @@ Registrar Message
 
 .mission-vision {
   width: 30%;
+  text-align: justify;
 }
 
 .registrar img {
@@ -444,7 +568,7 @@ Registrar Message
   float: left;
   margin: 0rem 2rem 1rem 0rem;
   /*border: 0.5rem solid var(--clr-mdcngreen); */
-  outline: 0.2rem solid var(--clr-mdcnred);
+  outline: 0.2rem solid var(--clr-mdcngreen-1);
   outline-offset: 0.3rem;
   border-radius: 10%;
 }
@@ -475,18 +599,18 @@ Registrar Message
 
 /*
 ======================================== 
-Latest News
+Recent News
 ========================================
 */
 
-.latest-news-section {
+.recent-news-section {
   min-width: 100vw;
-  min-height: 50rem;
+  min-height: 45rem;
   margin-bottom: 1rem;
   background-color: var(--clr-grey-10);
 }
 
-#latest-new-container {
+#recent-new-container {
   width: 80%;
   margin-left: auto;
   margin-right: auto;
@@ -496,9 +620,12 @@ Latest News
   flex-wrap: wrap;
 }
 
-#news-heading {
-  margin-left: 10rem;
+.news-heading {
   padding-top: 1rem;
+  color: var(--clr-mdcnred);
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  text-align: center;
 }
 
 .news-card {
@@ -507,7 +634,7 @@ Latest News
   background-color: var(--clr-white);
   position: relative;
   top: 3rem;
-  bottom: 5rem;
+  bottom: 3rem;
   border-radius: 0.5rem 0.5rem 0.5rem 0.5rem;
   /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); */
   /* embossed box shadow */
@@ -521,6 +648,12 @@ Latest News
   height: 40%;
 }
 
+.news-card h2 {
+  color: var(--clr-mdcnred-3);
+  font-size: 1.2rem;
+  padding: 0.5rem 0rem;
+}
+
 .news-card-text {
   padding-inline: 1rem;
 }
@@ -532,6 +665,36 @@ Latest News
 .news-card a:hover {
   text-decoration: underline;
   color: var(--clr-mdcngreen-1);
+}
+
+/*
+======================================== 
+Management
+========================================
+*/
+
+.mdcn-management-section {
+  min-width: 100vw;
+  margin-bottom: 1rem;
+}
+
+#mdcn-management {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  width: 75vw;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+  margin-top: 3rem;
+  margin-bottom: 5rem;
+}
+
+#mdcn-management img {
+  width: 20rem;
+  border-radius: 10%;
+  outline: 0.2rem solid var(--clr-mdcngreen-1);
+  outline-offset: 0.3rem;
 }
 
 /*

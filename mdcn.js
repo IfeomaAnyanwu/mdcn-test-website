@@ -15,12 +15,12 @@ for (let i = 0; i < list.length; i++) {
 //slider style
 const backgroundImages = [
   {
-    text: "maintains  register of doctors licencsed to practice in in nigeria each year",
-    image: "url('/images/practicing.jpg')",
+    text: "maintains  register of persons licencsed to practice medicine, dentistry and alternative-medicine in nigeria",
+    image: "url('/images/registrar-appointment.jpg')",
   },
   {
     text: "makes policies on medicine, dentistry and alternative medicine practice in nigeria",
-    image: "url('/images/council-members2.jpg')",
+    image: "url('/images/practicing.jpg')",
   },
   {
     text: "Determines the standard of knowledge and training of persons to practice as doctors and dentists",
@@ -42,10 +42,10 @@ const backgroundImages = [
   },
   {
     text: "Medical and dental practitioners disciplinary tribunal",
-    image: "url('/images/tribunal.jpg')",
+    image: "url('/images/registrar-handover.jpg')",
   },
   {
-    text: "Centralized Housemanship Placement",
+    text: "Centralized Housemanship Placement to 43 Training Institutions under Federal Government",
     image: "url('/images/registrar3.png')",
   },
 ];
